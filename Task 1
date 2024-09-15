@@ -2,7 +2,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 void start();
-void final_score(int score);
 void exit_game();
 
 static int high_score=0;
