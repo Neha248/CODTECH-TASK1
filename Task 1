@@ -4,7 +4,6 @@
 void start();
 void exit_game();
 
-static int high_score=0;
 int main()
 {
 	int choice = 0;
