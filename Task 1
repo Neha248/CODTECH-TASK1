@@ -1,0 +1,97 @@
+/* This quiz includes 5 questions related to C langauge programming */
+#include<stdio.h>
+#include<stdlib.h>
+void start();
+void final_score(int score);
+void exit_game();
+
+static int high_score=0;
+int main()
+{
+	int choice = 0;
+	printf("Enter 1 to start the game \n");
+	printf("Enter 2 to check your score \n");
+	printf("Enter 0 to exit \n");
+	printf("Enter your choice");
+	scanf("%d",&choice);
+	switch (choice)
+	{
+		case 1:
+			start();
+			break;
+		case 2:
+			exit_game();
+			break;
+		default:
+		exit(1);			
+	}
+	return 0;
+}
+void start()
+{
+	int score = 0,answer;
+	printf("Welcome to the QUIZ GAME \n");
+	//question 1
+	printf("1. What is the size of int in C language? \n");
+	printf(" 1. 2 bytes\n 2. 4 bytes \n 3. 6 bytes \n 4. 8 bytes");
+	printf("\n Enter your answer (1-4)");
+	scanf("%d", &answer);
+	if(answer==2){
+	printf("correct \n");
+	score++;
+    }
+	else
+	printf("Incorrect \nThe correct answer is 2. 4 bytes \n");
+	//question 2
+	printf("2.The notation of logical NOT operator in c language is \n");
+	printf(" 1.:\n 2.; \n 3.! \n 4.none of the above \n");
+	printf("\nEnter your answer (1-4)");
+	scanf("%d", &answer);
+	if(answer==3){
+	printf("correct \n");
+	score++;
+    }
+	else
+	printf("Incorrect \nThe correct answer is 3.!\n");
+	//question 3
+	printf("\n3. Which Data Structure is used to handle recursion in C? \n");
+	printf(" 1.Stack\n 2.Queue \n 3.Deque \n 4.Trees \n");
+	printf("\n Enter your answer (1-4)");
+	scanf("%d", &answer);
+	if(answer==1){
+	printf("correct \n");
+	score++;
+    }
+	else
+	printf("Incorrect \nThe correct answer is 1. Stack\n");
+	//question 4
+	printf("4. Which of the following is an exit control loop? \n");
+	printf(" 1.While loop\n 2.For loop \n 3.do-while loop \n 4.none of the above \n");
+	printf("\n Enter your answer (1-4)");
+	scanf("%d", &answer);
+	if(answer==3){
+	printf("correct \n");
+	score++;
+    }
+	else
+	printf("Incorrect\n The correct answer is 3.do-while loop \n");
+	//question 5
+	printf("\n5. How are String represented in memory in C language?");
+	printf("\n 1.An array of characters \n 2.the object of some class \n 3.linkedlist of characters \n 4.none of the above \n");
+	printf("\n Enter your answer (1-4)");
+	scanf("%d", &answer);
+	if(answer==1){
+	printf("correct \n");
+	score++;
+    }
+	else
+	printf("Incorrect \n The correct answer is 1. An array of characters\n");
+	printf(" \n Quiz is over! \n Your Final Score is :%d \n",score);
+
+}
+
+void exit_game()
+{
+	printf("Thank you for playing the Quiz\n");
+	exit(0);
+}
